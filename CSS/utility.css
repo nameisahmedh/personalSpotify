@@ -1,0 +1,226 @@
+:root{
+    --a:0
+}
+.left {
+    width: 25vw;
+    padding: 16px;
+    /* border: 2px solid red; */
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+    max-height: 100vh;
+    /* height: auto; */
+    height: 87vh;
+
+}
+
+.right {
+    background-color: #212121;
+    width: 75vw;
+    border-radius: 10px;
+    height: calc(100vh - 60px);
+    /* max-height: 100vh; */
+   
+}
+
+.containerinner{
+    display: flex;
+}
+.containerinner .left {
+    display: flex;
+    align-items: center;
+    background-color: #121212;
+    color: white;
+}
+
+.containerinner .left img {
+    margin-left: 19px;
+}
+
+.yourlibrary {
+    font-weight: 500;
+    font-family: 'Poppins';
+    margin-left: 19px;
+    margin-top: 10px;
+    filter: brightness(0.8);
+
+}
+
+.containerinner .left .plus {
+    font-size: 30px;
+    margin-left: 190px;
+
+}
+
+.library {
+
+    height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.libraryline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 18px;
+}
+.boxes{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 250px;
+    overflow-y: scroll;
+    margin: 16px;
+    /* background-color: green; */
+}
+
+.left .box {
+    background-color: #1f1f1f;
+    /* border: 2px solid; */
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 25vw;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    padding-left: 20px;
+    padding: 15px;
+
+}
+
+.left .box2 {
+    z-index: 1;
+}
+
+.left .box .first {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.left .box .button {
+    margin-top: 15px;
+    width: 140px;
+    padding: 6px;
+    border-radius: 16px;
+    font-weight: 600;
+}
+
+.left .footer {
+    width: 25vw;
+    
+}
+
+.left .footer ul {
+    font-size: 10px;
+    list-style: none;
+    height: 15vh;
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    /* background-color: blue; */
+}
+
+.left .footer a {
+    text-decoration: none;
+    bottom: 0;
+    color: rgba(255, 255, 255, 0.741);
+    font-family: Poppins;
+
+}
+.left .footer a:hover{
+    text-decoration: underline;
+}
+
+.right .navbar-right {
+    background-color: #1f1f1f;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 0px 20px;
+    margin-top: 20px;
+
+
+}
+
+.right .navbar-right .name {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.right .navbar-right .showall {
+    font-weight: 900;
+    color: gray;
+}
+
+
+
+.flexparent{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: auto;
+}
+.flexchild{
+    display: flex;
+    margin: 10px;
+}
+.flexchild .img{
+    height: 160px;
+    width: 160px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.names {
+    margin-top: 10px;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.names .name2 {
+    font-size: 14px;
+    /* filter: invert(0.3); */
+    color: gray;
+}
+
+.cursoring{
+    cursor: pointer;
+}
+
+.flexchild {
+    position: relative; /* Add this to make .playicon position relative to .flexchild */
+}
+
+.playicon {
+    position: absolute;
+    transition: all .5s ease-out;
+    top: 111px;
+    left: 91px;
+    opacity: var(--a);
+}
+
+.playicon img {
+    filter: brightness(1.6);
+    height: 60px;
+}
+.flexparent:has(.flexchild:hover) {
+    height: auto;
+    transition: height 0.3s ease; /* Add transition for smooth height change */
+}
+.flexchild:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.211);
+    transition: all .1s;
+    --a:1;
+    
+}
